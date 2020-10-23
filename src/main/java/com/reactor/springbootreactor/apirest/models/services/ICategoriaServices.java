@@ -11,5 +11,7 @@ public interface ICategoriaServices {
         
     public Mono<Categoria> findById(String id);
 
-    public Mono<Categoria> save(Categoria categoria);    
+    public Mono<Categoria> save(Categoria categoria);
+    
+    public Mono<Categoria> findByNombre(String nombre);
 }

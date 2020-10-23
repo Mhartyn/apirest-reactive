@@ -29,5 +29,10 @@ public class CategoriaService implements ICategoriaServices {
     public Mono<Categoria> save(Categoria categoria) {
         return dao.save(categoria);
     }
+
+    @Override
+    public Mono<Categoria> findByNombre(String nombre) {
+        return dao.findByNombre(nombre);
+    }
     
 }

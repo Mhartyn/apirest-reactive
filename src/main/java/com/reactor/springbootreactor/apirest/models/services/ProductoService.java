@@ -47,5 +47,15 @@ public class ProductoService implements IProductoServices {
     public Flux<Producto> findAllConNombreUpperCaseRepeat() {
         return findAllConNombreUpperCase().repeat(5000);
     }
+
+    @Override
+    public Mono<Producto> findByNombre(String nombre) {        
+        return dao.findByNombre(nombre);
+    }
+
+    @Override
+    public Mono<Producto> obtnerPorNombre(String nombre) {
+        return dao.obtnerPorNombre(nombre);
+    }
     
 }

@@ -18,4 +18,8 @@ public interface IProductoServices {
     public Mono<Producto> save(Producto producto);
 
     public Mono<Void> delete(Producto producto);
+
+    public Mono<Producto> findByNombre(String nombre);
+    
+    public Mono<Producto> obtnerPorNombre(String nombre);
 }
