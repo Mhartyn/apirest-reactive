@@ -95,9 +95,9 @@ public class ProductoHandler {
         return service.findById(id).flatMap(p -> ServerResponse
                                                 .ok()
                                                 .contentType(MediaType.APPLICATION_JSON)
-                                                .body(fromValue(p))
-                                                .switchIfEmpty(ServerResponse.notFound().build())
-                                            );     
+                                                .body(fromValue(p))                                                
+                                            )
+                                            .switchIfEmpty(ServerResponse.notFound().build());
     }
 
     public Mono<ServerResponse> crear(ServerRequest request){
